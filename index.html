@@ -1,1 +1,19 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		if('serviceWorker' in navigator){
+			navigator.serviceWorker.register('./index.js').then(
+				function(registration){
+					console.log(registration.scope);
+				}
+			).catch(err){
+				console.log(err);
+			}
+		}
+	</script>
+</body>
+</html>
